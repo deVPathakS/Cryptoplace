@@ -4,7 +4,8 @@ export const CoinContext = createContext();
 
 const CoinContextProvider = (props)=>{
 
-    const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_KEY = import.meta.env.VITE_API_KEY;
+;
     const [allCoin, setAllCoin] = useState([]);
     const [currency, setCurrency] = useState({
         name: "usd",
